@@ -10,6 +10,10 @@ schemes:
   - https
   - http
 paths:
-  $ref: paths.yaml
-definitions:
-  $ref: definitions.yaml
+  /:
+    $ref: '#/beacon.yaml/paths/~1'
+  /query:
+    $ref: '#/beacon.yaml/paths/~1query'
+
+# definitions:
+#   $ref: 'https://raw.githubusercontent.com/sdelatorrep/beacon-team/open_api/src/main/definitions.yaml'
