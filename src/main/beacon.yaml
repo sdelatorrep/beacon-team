@@ -6,7 +6,7 @@ info:
   description: Beacon operations, definitions, parameters and responses.
 
 paths:
-  \:
+  '\':
     get:
     description: Get information about Beacon
     operationId: getBeacon
@@ -18,7 +18,7 @@ paths:
         schema:
           items:
             $ref: '#/definitions/Beacon'
-  \query:
+  '\query':
     get:
       description: Get response to a Beacon query for allele information.
       operationId: getBeaconAlleleResponse
