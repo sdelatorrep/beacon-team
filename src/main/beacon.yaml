@@ -6,19 +6,19 @@ info:
   description: Beacon operations, definitions, parameters and responses.
 
 paths:
-  '\':
+  '/':
     get:
-    description: Get information about Beacon
-    operationId: getBeacon
-    produces:
-      - application/json
-    responses:
-      '200':
-        description: OK / Call is successful
-        schema:
-          items:
-            $ref: '#/definitions/Beacon'
-  '\query':
+      description: Get information about Beacon
+      operationId: getBeacon
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: OK / Call is successful
+          schema:
+            items:
+              $ref: '#/definitions/Beacon'
+  '/query':
     get:
       description: Get response to a Beacon query for allele information.
       operationId: getBeaconAlleleResponse
@@ -530,7 +530,7 @@ definitions:
     description: Data use conditions ruling this dataset.
     properties:
       consentCodeDataUse:
-        $ref: "https://raw.githubusercontent.com/sdelatorrep/ga4gh-consent-policy/open_api/src/main/consent_code.yaml#/ConsentCodeDataUse"
+        $ref: "https://raw.githubusercontent.com/sdelatorrep/ga4gh-consent-policy/open_api/src/main/consent_code.yaml#/definitions/ConsentCodeDataUse"
       adamDataUse:
         $ref: "#/definitions/AdamDataUse"
   AdamDataUse:
@@ -542,10 +542,10 @@ definitions:
       - metaConditions
     properties:
       header:
-        $ref: "https://raw.githubusercontent.com/sdelatorrep/ADA-M/open_api/adam.yml#/AdamHeader"
+        $ref: "https://raw.githubusercontent.com/sdelatorrep/ADA-M/open_api/adam.yml#/definitions/AdamHeader"
       profile:
-        $ref: "https://raw.githubusercontent.com/sdelatorrep/ADA-M/open_api/adam.yml#/AdamProfile"
+        $ref: "https://raw.githubusercontent.com/sdelatorrep/ADA-M/open_api/adam.yml#/definitions/AdamProfile"
       terms:
-        $ref: "https://raw.githubusercontent.com/sdelatorrep/ADA-M/open_api/adam.yml#/AdamTerms"
+        $ref: "https://raw.githubusercontent.com/sdelatorrep/ADA-M/open_api/adam.yml#/definitions/AdamTerms"
       metaConditions:
-        $ref: "https://raw.githubusercontent.com/sdelatorrep/ADA-M/open_api/adam.yml#/AdamMetaConditions"
+        $ref: "https://raw.githubusercontent.com/sdelatorrep/ADA-M/open_api/adam.yml#/definitions/AdamMetaConditions"
